@@ -4,6 +4,6 @@
 
 
 ## Getting Started
-There is no bower nor npm at the moment, just a sass file that you can copy/past to your project: [Flexboxgrid-sass](https://github.com/guillaumebreux/flexboxgrid-sass/blob/master/scss/fbgs.scss)
+There is no bower nor npm at the moment, just a sass file that you can copy/past to your project: [Flexboxgrid-sass](https://github.com/guillaumebreux/flexboxgrid-sass/blob/master/scss/_fbgs.scss)
 
 ## How to use
