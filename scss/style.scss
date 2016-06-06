@@ -1,0 +1,35 @@
+$fbgs-gutter-width: 1.6rem;
+@import '_fbgs.scss';
+
+/**
+* Syntaxique sugar
+*/
+$color-1: #3F61A6;
+$code-block: #2F4673;
+$color-3: #829FD9;
+$background: #DCE0EC;
+$color-5: #03A6A6;
+
+* { box-sizing: border-box; }
+body, html {
+  background-color: $background;
+  font-size: 10px;
+}
+#wrapper {
+  max-width: 768px; margin: 0 auto; padding: 1em;
+  font-size: 1.6em;
+  xmp {
+    padding: 1em;
+    background-color: $code-block;
+    color: $background;
+  }
+  .box > * {
+    padding: 1em 0; margin-bottom: 1em;
+    background-color: yellowgreen;
+    &.box-high { padding: 2em 0; }
+  }
+  section {
+    background: #fff;
+    &.fill { background-color: #fff; }
+  }
+}
