@@ -1298,23 +1298,26 @@
 
 body, html {
   background-color: #DCE0EC;
-  font-size: 10px; }
+  font: 10px 'Open Sans', sans-serif; }
 
 #wrapper {
-  max-width: 768px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 1em;
   font-size: 1.6em; }
   #wrapper xmp {
     padding: 1em;
-    background-color: #3F61A6;
-    color: #DCE0EC; }
+    margin: 0;
+    background-color: #222;
+    overflow: auto;
+    color: #DCE0EC;
+    font: 300 0.8em/1.6em "Source Code Pro", sans-serif; }
   #wrapper .box > * {
-    padding: 1em 0;
+    height: 2em;
     margin-bottom: 1em;
     background-color: #03A6A6; }
     #wrapper .box > *.box-high {
-      padding: 2em 0; }
+      height: 4em; }
   #wrapper section {
     background: #fff; }
     #wrapper section.fill {

@@ -4,6 +4,7 @@ $fbgs-gutter-width: 1.6rem;
 /**
 * Syntaxique sugar
 */
+$blackboard: #222;
 $code-block: #3F61A6;
 $code-block-dark: #2F4673;
 $color-3: #829FD9;
@@ -13,20 +14,20 @@ $box-color: #03A6A6;
 * { box-sizing: border-box; }
 body, html {
   background-color: $background;
-  font-size: 10px;
+  font: 10px 'Open Sans', sans-serif;
 }
 #wrapper {
-  max-width: 768px; margin: 0 auto; padding: 1em;
+  max-width: 1200px; margin: 0 auto; padding: 1em;
   font-size: 1.6em;
   xmp {
-    padding: 1em;
-    background-color: $code-block;
-    color: $background;
+    padding: 1em; margin: 0;
+    background-color: $blackboard; overflow: auto;
+    color: $background; font: 300 0.8em/1.6em "Source Code Pro", sans-serif;
   }
   .box > * {
-    padding: 1em 0; margin-bottom: 1em;
+    height: 2em; margin-bottom: 1em;
     background-color: $box-color;
-    &.box-high { padding: 2em 0; }
+    &.box-high { height: 4em; }
   }
   section {
     background: #fff;
