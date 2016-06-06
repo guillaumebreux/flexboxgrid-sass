@@ -1,6 +1,6 @@
 $fbgs-grid-number: 12 !default;
 $fbgs-gutter-width: 1rem !default;
-$fbgs-gutter-compensation: calc(#{$fbgs-gutter-width} * 0.5 * -1) !default;
+$fbgs-gutter-compensation: #{$fbgs-gutter-width * -0.5} !default;
 $fbgs-breakpoints: (
         '-sm': '(min-width: 560px)',
         '-med': '(min-width: 769px)',
@@ -23,6 +23,7 @@ $fbgs-breakpoints: (
     display: flex; flex: 0 1 auto; flex-direction: row; justify-content: space-between;
     &.justify#{$item}-start:not(.no-compensation#{$item}) {
       margin-left: $fbgs-gutter-compensation; margin-right: $fbgs-gutter-compensation;
+      box-sizing: border-box;
     }
     &.reverse { flex-direction: row-reverse; }
     &.flex#{$item}-column {
@@ -30,6 +31,7 @@ $fbgs-breakpoints: (
       &.reverse { flex-direction: column-reverse; }
     }
     &.force-width#{$item} { width: 100%; }
+    > * { box-sizing: border-box; }
     .flex#{$item}-shrink-1 { flex-shrink: 1; }
     .flex#{$item}-center { margin-left: auto; margin-right: auto; }
     .flex#{$item}-left { margin-left: initial; margin-right: 0; }

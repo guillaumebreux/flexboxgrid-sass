@@ -3,8 +3,105 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Flexboxgrid-sass</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+	<link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-<h1>Small sass mixins for a full flexbox grid</h1>
+
+	<div id="wrapper">
+		<h1>Small sass mixins for a full flexbox grid</h1>
+		<h2>Fluid grid example</h2>
+		<div class="flex flex-wrap box">
+			<div class="flex-1"></div>
+			<div class="flex-11"></div>
+			<div class="flex-2"></div>
+			<div class="flex-10"></div>
+			<div class="flex-3"></div>
+			<div class="flex-9"></div>
+			<div class="flex-4"></div>
+			<div class="flex-8"></div>
+			<div class="flex-5"></div>
+			<div class="flex-7"></div>
+			<div class="flex-6"></div>
+			<div class="flex-6"></div>
+		</div>
+
+<xmp><div class="flex flex-wrap">
+	<div class="flex-1"></div>
+	<div class="flex-12"></div>
+	<div class="flex-2"></div>
+	<div class="flex-10"></div>
+	<div class="flex-3"></div>
+	<div class="flex-9"></div>
+	<div class="flex-4"></div>
+	<div class="flex-8"></div>
+	<div class="flex-5"></div>
+	<div class="flex-7"></div>
+	<div class="flex-6"></div>
+	<div class="flex-6"></div>
+</div></xmp>
+
+		<h2>Responsive grid example</h2>
+		<div class="flex flex-wrap box">
+			<div class="flex-1 flex-sm-2 flex-med-3 flex-lg-4"></div>
+			<div class="flex-11 flex-sm-10 flex-med-9 flex-lg-8"></div>
+			<div class="flex-2 flex-sm-3 flex-med-4 flex-lg-5"></div>
+			<div class="flex-10 flex-sm-9 flex-med-8 flex-lg-7"></div>
+			<div class="flex-3 flex-sm-4 flex-med-5 flex-lg-6"></div>
+			<div class="flex-9 flex-sm-8 flex-med-7 flex-lg-6"></div>
+			<div class="flex-12 flex-sm-6 flex-med-5 flex-lg-2"></div>
+			<div class="flex-12 flex-sm-6 flex-med-7 flex-lg-10"></div>
+		</div>
+
+<xmp><div class="flex flex-wrap">
+	<div class="flex-1 flex-sm-2 flex-med-3 flex-lg-4"></div>
+	<div class="flex-1 flex-sm-10 flex-med-9 flex-lg-8"></div>
+	<div class="flex-2 flex-sm-3 flex-med-4 flex-lg-5"></div>
+	<div class="flex-10 flex-sm-9 flex-med-8 flex-lg-7"></div>
+	<div class="flex-3 flex-sm-4 flex-med-5 flex-lg-6"></div>
+	<div class="flex-9 flex-sm-8 flex-med-7 flex-lg-6"></div>
+	<div class="flex-12 flex-sm-6 flex-med-5 flex-lg-2"></div>
+	<div class="flex-12 flex-sm-6 flex-med-7 flex-lg-10"></div>
+</div></xmp>
+
+		<h2>Align-items:</h2>
+		<h3>Default: stretch</h3>
+		<div class="flex flex-wrap box">
+			<div class="flex-4"></div>
+			<div class="flex-4 box-high"></div>
+			<div class="flex-4"></div>
+		</div>
+		<h3>Center</h3>
+		<div class="flex flex-wrap align-items-center box">
+			<div class="flex-4"></div>
+			<div class="flex-4 box-high"></div>
+			<div class="flex-4"></div>
+		</div>
+		<h3>Start</h3>
+		<div class="flex flex-wrap align-items-start box">
+			<div class="flex-4"></div>
+			<div class="flex-4 box-high"></div>
+			<div class="flex-4"></div>
+		</div>
+		<h3>End</h3>
+		<div class="flex flex-wrap align-items-end box">
+			<div class="flex-4"></div>
+			<div class="flex-4 box-high"></div>
+			<div class="flex-4"></div>
+		</div>
+
+<xmp><div class="flex flex-wrap box">
+	<div class="flex-4"></div>
+	<div class="flex-4 box-high"></div>
+	<div class="flex-4"></div>
+</div>
+	<div class="flex flex-wrap align-items-center box">
+		<div class="flex-4"></div>
+		<div class="flex-4 box-high"></div>
+		<div class="flex-4"></div>
+	</div></xmp>
+
+	</div>
+
 </body>
 </html>
