@@ -46,6 +46,9 @@ $fbgs-breakpoints: (
     .flex#{$item}-#{$i} { @include basis($i, $n); }
     .justify#{$item}-start .flex#{$item}-#{$i} { @include basis($i, $n, true); }
   }
+  .flex#{$item}-wrap { flex-wrap: wrap; }
+  .flex#{$item}-nowrap { flex-wrap: nowrap; }
+
   .justify#{$item}-start { justify-content: flex-start; }
   .justify#{$item}-center { justify-content: center; }
   .justify#{$item}-end { justify-content: flex-end; }
@@ -67,7 +70,7 @@ $fbgs-breakpoints: (
 
   .flex#{$item}-first { order: -1; }
   .flex#{$item}-last { order: 1; }
-  .flex#{$item}-wrap { flex-wrap: wrap; }
+  .flex#{$item}-auto { flex-basis: auto; }
 }
 @include fbgs-init('');
 @each $item, $breakpoint in $fbgs-breakpoints {

@@ -4,16 +4,23 @@
 	<meta charset="UTF-8">
 	<title>Flexboxgrid-sass</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+	<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,300' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,300italic,400italic,600italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="style/style.css">
 </head>
 <body>
+<header>
+	<h1>Small sass mixins for a full flexbox grid</h1>
+	<a href="https://github.com/guillaumebreux/flexboxgrid-sass" target="_black" class="button flex align-items-center">
+		<i class="fa fa-github" aria-hidden="true"></i>
+		<span>Go to Github</span>
+	</a>
+</header>
 	<div id="wrapper">
-		<h1>Small sass mixins for a full flexbox grid</h1>
 		<h2>Fluid grid example</h2>
-		<div class="flex flex-wrap align-items-start">
-			<div class="flex-12 flex-med-7 flex flex-wrap box">
+		<div class="flex flex-wrap flex-med-nowrap">
+			<div class="flex-12 flex-shrink-1 flex flex-wrap box align-between">
 				<div class="flex-1"></div>
 				<div class="flex-11"></div>
 				<div class="flex-2"></div>
@@ -27,7 +34,7 @@
 				<div class="flex-6"></div>
 				<div class="flex-6"></div>
 			</div>
-			<div class="flex-12 flex-med-5">
+			<div class="flex-12 flex-med-auto">
 <xmp><div class="flex flex-wrap">
 	<div class="flex-1"></div>
 	<div class="flex-12"></div>
@@ -46,8 +53,8 @@
 		</div>
 
 		<h2>Responsive grid example</h2>
-		<div class="flex flex-wrap align-items-start">
-			<div class="flex-12 flex-med-5 flex flex-wrap box">
+		<div class="flex flex-wrap flex-med-nowrap">
+			<div class="flex-12 flex-shrink-1 flex flex-wrap box align-between">
 				<div class="flex-1 flex-sm-2 flex-med-3 flex-lg-4"></div>
 				<div class="flex-11 flex-sm-10 flex-med-9 flex-lg-8"></div>
 				<div class="flex-2 flex-sm-3 flex-med-4 flex-lg-5"></div>
@@ -57,7 +64,7 @@
 				<div class="flex-12 flex-sm-6 flex-med-5 flex-lg-2"></div>
 				<div class="flex-12 flex-sm-6 flex-med-7 flex-lg-10"></div>
 			</div>
-			<div class="flex-12 flex-med-7 flex-med-first">
+			<div class="flex-12 flex-med-auto flex-med-first">
 <xmp><div class="flex flex-wrap">
 	<div class="flex-1 flex-sm-2 flex-med-3 flex-lg-4"></div>
 	<div class="flex-1 flex-sm-10 flex-med-9 flex-lg-8"></div>
