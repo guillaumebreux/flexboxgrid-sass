@@ -25,9 +25,9 @@ body, html {
     color: $background; font: 300 0.8em/1.6em "Source Code Pro", sans-serif;
   }
   .box > * {
-    height: 2em; margin-bottom: 1em;
+    min-height: 2em; margin-bottom: 1em;
     background-color: $box-color;
-    &.box-high { height: 4em; }
+    &.box-high { min-height: 4em; }
   }
   section {
     background: #fff;

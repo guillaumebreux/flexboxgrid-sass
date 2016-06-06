@@ -59,7 +59,7 @@ $fbgs-breakpoints: (
   .align-items#{$item}-start { align-items: flex-start; }
   .align-items#{$item}-center { align-items: center; }
   .align-items#{$item}-end { align-items: flex-end; }
-  .align-items#{$item}-stretch { align-items: flex-end; }
+  .align-items#{$item}-stretch { align-items: stretch; }
 
   .align-self#{$item}-start { align-self: flex-start; }
   .align-self#{$item}-center { align-self: center; }
