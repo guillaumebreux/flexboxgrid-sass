@@ -16,7 +16,20 @@ module.exports = function(grunt) {
     watch: {
       scss: {
         files: ['**/*.scss', '**/*.html'],
-        tasks: ['sass']
+        tasks: ['sass', 'autoprefixer']
+      }
+    },
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 versions']
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'style/',
+          src: '**/*.css',
+          dest: 'style/'
+        }]
       }
     }
   });
@@ -24,8 +37,9 @@ module.exports = function(grunt) {
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
   // Default task(s).
-  grunt.registerTask('default', ['sass']);
+  grunt.registerTask('default', ['sass', 'autoprefixer']);
 
 };
