@@ -29,11 +29,11 @@ $fbgs-breakpoints: (
   // Parent
   .flex#{$breakpoint_name} {
     display: flex; flex: 0 1 auto; justify-content: space-between;
+    &.no-compensation#{$breakpoint_name} { margin-left: 0; margin-right: 0; }
     > * { box-sizing: border-box; }
   }
   @if $breakpoint_name == '' { .justify-start { @include justifyStart($breakpoint_name) } }
   @else { .justify-start, .justify#{$breakpoint_name}-start { @include justifyStart($breakpoint_name) } }
-  .no-compensation#{$breakpoint_name} { margin-left: 0; margin-right: 0; }
   .row-reverse#{$breakpoint_name} { flex-direction: row-reverse; }
   .flex-column#{$breakpoint_name} {
     flex-direction: column;
