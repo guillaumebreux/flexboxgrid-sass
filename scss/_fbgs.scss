@@ -9,72 +9,71 @@ $fbgs-breakpoints: (
 @mixin basis($i, $n, $justify-start: false) {
   @if $justify-start {
     flex-basis: calc(#{100% / $n} - #{$fbgs-gutter-width});
-    max-width: calc(#{100% / $n} - #{$fbgs-gutter-width});
     @if $i != $fbgs-grid-number {
       margin-left: #{$fbgs-gutter-width * 0.5}; margin-right: #{$fbgs-gutter-width * 0.5};
     }
-  } @else {
-    flex-basis: calc(#{100% / $n} - #{$fbgs-gutter-width * ($n - 1) / $n});
-    max-width: calc(#{100% / $n} - #{$fbgs-gutter-width * ($n - 1) / $n});
-  }
+  } @else { flex-basis: calc(#{100% / $n} - #{$fbgs-gutter-width * ($n - 1) / $n}); }
 }
-@mixin fbgs-init($item) {
-  .flex#{$item} {
-    display: flex; flex: 0 1 auto; flex-direction: row; justify-content: space-between;
-    &.justify#{$item}-start:not(.no-compensation#{$item}) {
-      margin-left: $fbgs-gutter-compensation; margin-right: $fbgs-gutter-compensation;
-      box-sizing: border-box;
-    }
-    &.reverse { flex-direction: row-reverse; }
-    &.flex#{$item}-column {
-      flex-direction: column;
-      &.reverse { flex-direction: column-reverse; }
-    }
-    &.force-width#{$item} { width: 100%; }
+@mixin fbgs-init($breakpoint_name) {
+  // Parent
+  .flex#{$breakpoint_name} {
+    display: flex; flex: 0 1 auto; justify-content: space-between;
     > * { box-sizing: border-box; }
-    .flex#{$item}-shrink-1 { flex-shrink: 1; }
-    .flex#{$item}-center { margin-left: auto; margin-right: auto; }
-    .flex#{$item}-left { margin-left: initial; margin-right: 0; }
-    .flex#{$item}-right { margin-right: initial; margin-left: 0; }
   }
+  .justify#{$breakpoint_name}-start {
+    margin-left: $fbgs-gutter-compensation; margin-right: $fbgs-gutter-compensation;
+    box-sizing: border-box;
+    @for $i from 1 through $fbgs-grid-number {
+      > .flex#{$breakpoint_name}-#{$i} { @include basis($i, $fbgs-grid-number / $i, true); }
+    }
+  }
+  .no-compensation#{$breakpoint_name} { margin-left: 0; margin-right: 0; }
+  .row-reverse#{$breakpoint_name} { flex-direction: row-reverse; }
+  .flex-column#{$breakpoint_name} {
+    flex-direction: column;
+    &.column-reverse#{$breakpoint_name} { flex-direction: column-reverse; }
+  }
+  .force-width#{$breakpoint_name} { width: 100%; }
+  .flex#{$breakpoint_name}-wrap { flex-wrap: wrap; }
+  .flex#{$breakpoint_name}-nowrap { flex-wrap: nowrap; }
+  .justify#{$breakpoint_name}-start { justify-content: flex-start; }
+  .justify#{$breakpoint_name}-center { justify-content: center; }
+  .justify#{$breakpoint_name}-end { justify-content: flex-end; }
+  .justify#{$breakpoint_name}-around { justify-content: space-around; }
+  .justify#{$breakpoint_name}-between { justify-content: space-between; }
+  .align-content#{$breakpoint_name}-start { align-content: flex-start; }
+  .align-content#{$breakpoint_name}-stretch { align-content: stretch; }
+  .align-content#{$breakpoint_name}-between { align-content: space-between; }
+  .align-content#{$breakpoint_name}-center { align-content: center; }
+  .align-items#{$breakpoint_name}-start { align-items: flex-start; }
+  .align-items#{$breakpoint_name}-center { align-items: center; }
+  .align-items#{$breakpoint_name}-end { align-items: flex-end; }
+  .align-items#{$breakpoint_name}-stretch { align-items: flex-end; }
+  .align-items#{$breakpoint_name}-baseline { align-items: baseline; }
+
+  // Chrildren
   @for $i from 1 through $fbgs-grid-number {
-    $n: $fbgs-grid-number / $i;
-    .flex#{$item}-#{$i},
-    .flex#{$item}-offset-#{$i} { flex: 0 0 auto; }
-    .flex#{$item}-offset-0 { margin-left: #{$fbgs-gutter-width * 0.5} }
-    .flex#{$item}-offset-#{$i} { margin-left: calc(#{100% / $n} + #{$fbgs-gutter-width * 0.5}); }
-    .flex#{$item}-#{$i} { @include basis($i, $n); }
-    .justify#{$item}-start .flex#{$item}-#{$i} { @include basis($i, $n, true); }
+    .flex#{$breakpoint_name}-#{$i} { flex: 0 0 auto; @include basis($i, $fbgs-grid-number / $i); }
   }
-  .flex#{$item}-wrap { flex-wrap: wrap; }
-  .flex#{$item}-nowrap { flex-wrap: nowrap; }
-
-  .justify#{$item}-start { justify-content: flex-start; }
-  .justify#{$item}-center { justify-content: center; }
-  .justify#{$item}-end { justify-content: flex-end; }
-  .justify#{$item}-around { justify-content: space-around; }
-  .justify#{$item}-between { justify-content: space-between; }
-
-  .align#{$item}-start { align-content: flex-start; }
-  .align#{$item}-stretch { align-content: stretch; }
-  .align#{$item}-between { align-content: space-between; }
-
-  .align-items#{$item}-start { align-items: flex-start; }
-  .align-items#{$item}-center { align-items: center; }
-  .align-items#{$item}-end { align-items: flex-end; }
-  .align-items#{$item}-stretch { align-items: stretch; }
-
-  .align-self#{$item}-start { align-self: flex-start; }
-  .align-self#{$item}-center { align-self: center; }
-  .align-self#{$item}-end { align-self: flex-end; }
-
-  .flex#{$item}-first { order: -1; }
-  .flex#{$item}-last { order: 1; }
-  .flex#{$item}-auto { flex-basis: auto; }
+  .flex#{$breakpoint_name}-offset-0 { margin-left: #{$fbgs-gutter-width * 0.5} }
+  @for $i from 1 through $fbgs-grid-number {
+    .flex#{$breakpoint_name}-offset-#{$i} { margin-left: calc(#{100% / $fbgs-grid-number / $i} + #{$fbgs-gutter-width * 0.5}); }
+  }
+  .align-self#{$breakpoint_name}-start { align-self: flex-start; }
+  .align-self#{$breakpoint_name}-center { align-self: center; }
+  .align-self#{$breakpoint_name}-end { align-self: flex-end; }
+  .flex#{$breakpoint_name}-shrink { flex-shrink: 1; }
+  .flex#{$breakpoint_name}-first { order: -1; }
+  .flex#{$breakpoint_name}-last { order: 1; }
+  .flex#{$breakpoint_name}-auto { flex-basis: auto; }
+  .flex#{$breakpoint_name}-center { margin-left: auto; margin-right: auto; }
+  .flex#{$breakpoint_name}-left { margin-left: initial; margin-right: 0; }
+  .flex#{$breakpoint_name}-right { margin-right: initial; margin-left: 0; }
 }
+
 @include fbgs-init('');
-@each $item, $breakpoint in $fbgs-breakpoints {
+@each $breakpoint_name, $breakpoint in $fbgs-breakpoints {
   @media #{$breakpoint} {
-    @include fbgs-init($item);
+    @include fbgs-init($breakpoint_name);
   }
 }
