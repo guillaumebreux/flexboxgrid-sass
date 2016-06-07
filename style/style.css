@@ -15,61 +15,73 @@
   .justify-start > .flex-1 {
     -ms-flex-preferred-size: calc(8.33333% - 1.6rem);
         flex-basis: calc(8.33333% - 1.6rem);
+    max-width: calc(8.33333% - 1.6rem);
     margin-left: 0.8rem;
     margin-right: 0.8rem; }
   .justify-start > .flex-2 {
     -ms-flex-preferred-size: calc(16.66667% - 1.6rem);
         flex-basis: calc(16.66667% - 1.6rem);
+    max-width: calc(16.66667% - 1.6rem);
     margin-left: 0.8rem;
     margin-right: 0.8rem; }
   .justify-start > .flex-3 {
     -ms-flex-preferred-size: calc(25% - 1.6rem);
         flex-basis: calc(25% - 1.6rem);
+    max-width: calc(25% - 1.6rem);
     margin-left: 0.8rem;
     margin-right: 0.8rem; }
   .justify-start > .flex-4 {
     -ms-flex-preferred-size: calc(33.33333% - 1.6rem);
         flex-basis: calc(33.33333% - 1.6rem);
+    max-width: calc(33.33333% - 1.6rem);
     margin-left: 0.8rem;
     margin-right: 0.8rem; }
   .justify-start > .flex-5 {
     -ms-flex-preferred-size: calc(41.66667% - 1.6rem);
         flex-basis: calc(41.66667% - 1.6rem);
+    max-width: calc(41.66667% - 1.6rem);
     margin-left: 0.8rem;
     margin-right: 0.8rem; }
   .justify-start > .flex-6 {
     -ms-flex-preferred-size: calc(50% - 1.6rem);
         flex-basis: calc(50% - 1.6rem);
+    max-width: calc(50% - 1.6rem);
     margin-left: 0.8rem;
     margin-right: 0.8rem; }
   .justify-start > .flex-7 {
     -ms-flex-preferred-size: calc(58.33333% - 1.6rem);
         flex-basis: calc(58.33333% - 1.6rem);
+    max-width: calc(58.33333% - 1.6rem);
     margin-left: 0.8rem;
     margin-right: 0.8rem; }
   .justify-start > .flex-8 {
     -ms-flex-preferred-size: calc(66.66667% - 1.6rem);
         flex-basis: calc(66.66667% - 1.6rem);
+    max-width: calc(66.66667% - 1.6rem);
     margin-left: 0.8rem;
     margin-right: 0.8rem; }
   .justify-start > .flex-9 {
     -ms-flex-preferred-size: calc(75% - 1.6rem);
         flex-basis: calc(75% - 1.6rem);
+    max-width: calc(75% - 1.6rem);
     margin-left: 0.8rem;
     margin-right: 0.8rem; }
   .justify-start > .flex-10 {
     -ms-flex-preferred-size: calc(83.33333% - 1.6rem);
         flex-basis: calc(83.33333% - 1.6rem);
+    max-width: calc(83.33333% - 1.6rem);
     margin-left: 0.8rem;
     margin-right: 0.8rem; }
   .justify-start > .flex-11 {
     -ms-flex-preferred-size: calc(91.66667% - 1.6rem);
         flex-basis: calc(91.66667% - 1.6rem);
+    max-width: calc(91.66667% - 1.6rem);
     margin-left: 0.8rem;
     margin-right: 0.8rem; }
   .justify-start > .flex-12 {
     -ms-flex-preferred-size: calc(100% - 1.6rem);
-        flex-basis: calc(100% - 1.6rem); }
+        flex-basis: calc(100% - 1.6rem);
+    max-width: calc(100% - 1.6rem); }
 
 .no-compensation {
   margin-left: 0;
@@ -82,6 +94,8 @@
 .flex-column {
   -ms-flex-direction: column;
       flex-direction: column; }
+  .flex-column > * {
+    max-width: 100%; }
   .flex-column.column-reverse {
     -ms-flex-direction: column-reverse;
         flex-direction: column-reverse; }
@@ -157,73 +171,85 @@
   -ms-flex: 0 0 auto;
       flex: 0 0 auto;
   -ms-flex-preferred-size: calc(8.33333% - 1.46667rem);
-      flex-basis: calc(8.33333% - 1.46667rem); }
+      flex-basis: calc(8.33333% - 1.46667rem);
+  max-width: calc(8.33333% - 1.46667rem); }
 
 .flex-2 {
   -ms-flex: 0 0 auto;
       flex: 0 0 auto;
   -ms-flex-preferred-size: calc(16.66667% - 1.33333rem);
-      flex-basis: calc(16.66667% - 1.33333rem); }
+      flex-basis: calc(16.66667% - 1.33333rem);
+  max-width: calc(16.66667% - 1.33333rem); }
 
 .flex-3 {
   -ms-flex: 0 0 auto;
       flex: 0 0 auto;
   -ms-flex-preferred-size: calc(25% - 1.2rem);
-      flex-basis: calc(25% - 1.2rem); }
+      flex-basis: calc(25% - 1.2rem);
+  max-width: calc(25% - 1.2rem); }
 
 .flex-4 {
   -ms-flex: 0 0 auto;
       flex: 0 0 auto;
   -ms-flex-preferred-size: calc(33.33333% - 1.06667rem);
-      flex-basis: calc(33.33333% - 1.06667rem); }
+      flex-basis: calc(33.33333% - 1.06667rem);
+  max-width: calc(33.33333% - 1.06667rem); }
 
 .flex-5 {
   -ms-flex: 0 0 auto;
       flex: 0 0 auto;
   -ms-flex-preferred-size: calc(41.66667% - 0.93333rem);
-      flex-basis: calc(41.66667% - 0.93333rem); }
+      flex-basis: calc(41.66667% - 0.93333rem);
+  max-width: calc(41.66667% - 0.93333rem); }
 
 .flex-6 {
   -ms-flex: 0 0 auto;
       flex: 0 0 auto;
   -ms-flex-preferred-size: calc(50% - 0.8rem);
-      flex-basis: calc(50% - 0.8rem); }
+      flex-basis: calc(50% - 0.8rem);
+  max-width: calc(50% - 0.8rem); }
 
 .flex-7 {
   -ms-flex: 0 0 auto;
       flex: 0 0 auto;
   -ms-flex-preferred-size: calc(58.33333% - 0.66667rem);
-      flex-basis: calc(58.33333% - 0.66667rem); }
+      flex-basis: calc(58.33333% - 0.66667rem);
+  max-width: calc(58.33333% - 0.66667rem); }
 
 .flex-8 {
   -ms-flex: 0 0 auto;
       flex: 0 0 auto;
   -ms-flex-preferred-size: calc(66.66667% - 0.53333rem);
-      flex-basis: calc(66.66667% - 0.53333rem); }
+      flex-basis: calc(66.66667% - 0.53333rem);
+  max-width: calc(66.66667% - 0.53333rem); }
 
 .flex-9 {
   -ms-flex: 0 0 auto;
       flex: 0 0 auto;
   -ms-flex-preferred-size: calc(75% - 0.4rem);
-      flex-basis: calc(75% - 0.4rem); }
+      flex-basis: calc(75% - 0.4rem);
+  max-width: calc(75% - 0.4rem); }
 
 .flex-10 {
   -ms-flex: 0 0 auto;
       flex: 0 0 auto;
   -ms-flex-preferred-size: calc(83.33333% - 0.26667rem);
-      flex-basis: calc(83.33333% - 0.26667rem); }
+      flex-basis: calc(83.33333% - 0.26667rem);
+  max-width: calc(83.33333% - 0.26667rem); }
 
 .flex-11 {
   -ms-flex: 0 0 auto;
       flex: 0 0 auto;
   -ms-flex-preferred-size: calc(91.66667% - 0.13333rem);
-      flex-basis: calc(91.66667% - 0.13333rem); }
+      flex-basis: calc(91.66667% - 0.13333rem);
+  max-width: calc(91.66667% - 0.13333rem); }
 
 .flex-12 {
   -ms-flex: 0 0 auto;
       flex: 0 0 auto;
   -ms-flex-preferred-size: calc(100% - 0rem);
-      flex-basis: calc(100% - 0rem); }
+      flex-basis: calc(100% - 0rem);
+  max-width: calc(100% - 0rem); }
 
 .flex-offset-0 {
   margin-left: 0.8rem; }
@@ -315,68 +341,80 @@
     .flex-sm > * {
       box-sizing: border-box; }
 
-  .justify-sm-start {
+  .justify-start, .justify-sm-start {
     margin-left: -0.8rem;
     margin-right: -0.8rem;
     box-sizing: border-box; }
-    .justify-sm-start > .flex-sm-1 {
+    .justify-start > .flex-sm-1, .justify-sm-start > .flex-sm-1 {
       -ms-flex-preferred-size: calc(8.33333% - 1.6rem);
           flex-basis: calc(8.33333% - 1.6rem);
+      max-width: calc(8.33333% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-sm-start > .flex-sm-2 {
+    .justify-start > .flex-sm-2, .justify-sm-start > .flex-sm-2 {
       -ms-flex-preferred-size: calc(16.66667% - 1.6rem);
           flex-basis: calc(16.66667% - 1.6rem);
+      max-width: calc(16.66667% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-sm-start > .flex-sm-3 {
+    .justify-start > .flex-sm-3, .justify-sm-start > .flex-sm-3 {
       -ms-flex-preferred-size: calc(25% - 1.6rem);
           flex-basis: calc(25% - 1.6rem);
+      max-width: calc(25% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-sm-start > .flex-sm-4 {
+    .justify-start > .flex-sm-4, .justify-sm-start > .flex-sm-4 {
       -ms-flex-preferred-size: calc(33.33333% - 1.6rem);
           flex-basis: calc(33.33333% - 1.6rem);
+      max-width: calc(33.33333% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-sm-start > .flex-sm-5 {
+    .justify-start > .flex-sm-5, .justify-sm-start > .flex-sm-5 {
       -ms-flex-preferred-size: calc(41.66667% - 1.6rem);
           flex-basis: calc(41.66667% - 1.6rem);
+      max-width: calc(41.66667% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-sm-start > .flex-sm-6 {
+    .justify-start > .flex-sm-6, .justify-sm-start > .flex-sm-6 {
       -ms-flex-preferred-size: calc(50% - 1.6rem);
           flex-basis: calc(50% - 1.6rem);
+      max-width: calc(50% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-sm-start > .flex-sm-7 {
+    .justify-start > .flex-sm-7, .justify-sm-start > .flex-sm-7 {
       -ms-flex-preferred-size: calc(58.33333% - 1.6rem);
           flex-basis: calc(58.33333% - 1.6rem);
+      max-width: calc(58.33333% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-sm-start > .flex-sm-8 {
+    .justify-start > .flex-sm-8, .justify-sm-start > .flex-sm-8 {
       -ms-flex-preferred-size: calc(66.66667% - 1.6rem);
           flex-basis: calc(66.66667% - 1.6rem);
+      max-width: calc(66.66667% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-sm-start > .flex-sm-9 {
+    .justify-start > .flex-sm-9, .justify-sm-start > .flex-sm-9 {
       -ms-flex-preferred-size: calc(75% - 1.6rem);
           flex-basis: calc(75% - 1.6rem);
+      max-width: calc(75% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-sm-start > .flex-sm-10 {
+    .justify-start > .flex-sm-10, .justify-sm-start > .flex-sm-10 {
       -ms-flex-preferred-size: calc(83.33333% - 1.6rem);
           flex-basis: calc(83.33333% - 1.6rem);
+      max-width: calc(83.33333% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-sm-start > .flex-sm-11 {
+    .justify-start > .flex-sm-11, .justify-sm-start > .flex-sm-11 {
       -ms-flex-preferred-size: calc(91.66667% - 1.6rem);
           flex-basis: calc(91.66667% - 1.6rem);
+      max-width: calc(91.66667% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-sm-start > .flex-sm-12 {
+    .justify-start > .flex-sm-12, .justify-sm-start > .flex-sm-12 {
       -ms-flex-preferred-size: calc(100% - 1.6rem);
-          flex-basis: calc(100% - 1.6rem); }
+          flex-basis: calc(100% - 1.6rem);
+      max-width: calc(100% - 1.6rem); }
 
   .no-compensation-sm {
     margin-left: 0;
@@ -389,6 +427,8 @@
   .flex-column-sm {
     -ms-flex-direction: column;
         flex-direction: column; }
+    .flex-column-sm > * {
+      max-width: 100%; }
     .flex-column-sm.column-reverse-sm {
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse; }
@@ -464,73 +504,85 @@
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(8.33333% - 1.46667rem);
-        flex-basis: calc(8.33333% - 1.46667rem); }
+        flex-basis: calc(8.33333% - 1.46667rem);
+    max-width: calc(8.33333% - 1.46667rem); }
 
   .flex-sm-2 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(16.66667% - 1.33333rem);
-        flex-basis: calc(16.66667% - 1.33333rem); }
+        flex-basis: calc(16.66667% - 1.33333rem);
+    max-width: calc(16.66667% - 1.33333rem); }
 
   .flex-sm-3 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(25% - 1.2rem);
-        flex-basis: calc(25% - 1.2rem); }
+        flex-basis: calc(25% - 1.2rem);
+    max-width: calc(25% - 1.2rem); }
 
   .flex-sm-4 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(33.33333% - 1.06667rem);
-        flex-basis: calc(33.33333% - 1.06667rem); }
+        flex-basis: calc(33.33333% - 1.06667rem);
+    max-width: calc(33.33333% - 1.06667rem); }
 
   .flex-sm-5 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(41.66667% - 0.93333rem);
-        flex-basis: calc(41.66667% - 0.93333rem); }
+        flex-basis: calc(41.66667% - 0.93333rem);
+    max-width: calc(41.66667% - 0.93333rem); }
 
   .flex-sm-6 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(50% - 0.8rem);
-        flex-basis: calc(50% - 0.8rem); }
+        flex-basis: calc(50% - 0.8rem);
+    max-width: calc(50% - 0.8rem); }
 
   .flex-sm-7 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(58.33333% - 0.66667rem);
-        flex-basis: calc(58.33333% - 0.66667rem); }
+        flex-basis: calc(58.33333% - 0.66667rem);
+    max-width: calc(58.33333% - 0.66667rem); }
 
   .flex-sm-8 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(66.66667% - 0.53333rem);
-        flex-basis: calc(66.66667% - 0.53333rem); }
+        flex-basis: calc(66.66667% - 0.53333rem);
+    max-width: calc(66.66667% - 0.53333rem); }
 
   .flex-sm-9 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(75% - 0.4rem);
-        flex-basis: calc(75% - 0.4rem); }
+        flex-basis: calc(75% - 0.4rem);
+    max-width: calc(75% - 0.4rem); }
 
   .flex-sm-10 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(83.33333% - 0.26667rem);
-        flex-basis: calc(83.33333% - 0.26667rem); }
+        flex-basis: calc(83.33333% - 0.26667rem);
+    max-width: calc(83.33333% - 0.26667rem); }
 
   .flex-sm-11 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(91.66667% - 0.13333rem);
-        flex-basis: calc(91.66667% - 0.13333rem); }
+        flex-basis: calc(91.66667% - 0.13333rem);
+    max-width: calc(91.66667% - 0.13333rem); }
 
   .flex-sm-12 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(100% - 0rem);
-        flex-basis: calc(100% - 0rem); }
+        flex-basis: calc(100% - 0rem);
+    max-width: calc(100% - 0rem); }
 
   .flex-sm-offset-0 {
     margin-left: 0.8rem; }
@@ -621,68 +673,80 @@
     .flex-med > * {
       box-sizing: border-box; }
 
-  .justify-med-start {
+  .justify-start, .justify-med-start {
     margin-left: -0.8rem;
     margin-right: -0.8rem;
     box-sizing: border-box; }
-    .justify-med-start > .flex-med-1 {
+    .justify-start > .flex-med-1, .justify-med-start > .flex-med-1 {
       -ms-flex-preferred-size: calc(8.33333% - 1.6rem);
           flex-basis: calc(8.33333% - 1.6rem);
+      max-width: calc(8.33333% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-med-start > .flex-med-2 {
+    .justify-start > .flex-med-2, .justify-med-start > .flex-med-2 {
       -ms-flex-preferred-size: calc(16.66667% - 1.6rem);
           flex-basis: calc(16.66667% - 1.6rem);
+      max-width: calc(16.66667% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-med-start > .flex-med-3 {
+    .justify-start > .flex-med-3, .justify-med-start > .flex-med-3 {
       -ms-flex-preferred-size: calc(25% - 1.6rem);
           flex-basis: calc(25% - 1.6rem);
+      max-width: calc(25% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-med-start > .flex-med-4 {
+    .justify-start > .flex-med-4, .justify-med-start > .flex-med-4 {
       -ms-flex-preferred-size: calc(33.33333% - 1.6rem);
           flex-basis: calc(33.33333% - 1.6rem);
+      max-width: calc(33.33333% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-med-start > .flex-med-5 {
+    .justify-start > .flex-med-5, .justify-med-start > .flex-med-5 {
       -ms-flex-preferred-size: calc(41.66667% - 1.6rem);
           flex-basis: calc(41.66667% - 1.6rem);
+      max-width: calc(41.66667% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-med-start > .flex-med-6 {
+    .justify-start > .flex-med-6, .justify-med-start > .flex-med-6 {
       -ms-flex-preferred-size: calc(50% - 1.6rem);
           flex-basis: calc(50% - 1.6rem);
+      max-width: calc(50% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-med-start > .flex-med-7 {
+    .justify-start > .flex-med-7, .justify-med-start > .flex-med-7 {
       -ms-flex-preferred-size: calc(58.33333% - 1.6rem);
           flex-basis: calc(58.33333% - 1.6rem);
+      max-width: calc(58.33333% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-med-start > .flex-med-8 {
+    .justify-start > .flex-med-8, .justify-med-start > .flex-med-8 {
       -ms-flex-preferred-size: calc(66.66667% - 1.6rem);
           flex-basis: calc(66.66667% - 1.6rem);
+      max-width: calc(66.66667% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-med-start > .flex-med-9 {
+    .justify-start > .flex-med-9, .justify-med-start > .flex-med-9 {
       -ms-flex-preferred-size: calc(75% - 1.6rem);
           flex-basis: calc(75% - 1.6rem);
+      max-width: calc(75% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-med-start > .flex-med-10 {
+    .justify-start > .flex-med-10, .justify-med-start > .flex-med-10 {
       -ms-flex-preferred-size: calc(83.33333% - 1.6rem);
           flex-basis: calc(83.33333% - 1.6rem);
+      max-width: calc(83.33333% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-med-start > .flex-med-11 {
+    .justify-start > .flex-med-11, .justify-med-start > .flex-med-11 {
       -ms-flex-preferred-size: calc(91.66667% - 1.6rem);
           flex-basis: calc(91.66667% - 1.6rem);
+      max-width: calc(91.66667% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-med-start > .flex-med-12 {
+    .justify-start > .flex-med-12, .justify-med-start > .flex-med-12 {
       -ms-flex-preferred-size: calc(100% - 1.6rem);
-          flex-basis: calc(100% - 1.6rem); }
+          flex-basis: calc(100% - 1.6rem);
+      max-width: calc(100% - 1.6rem); }
 
   .no-compensation-med {
     margin-left: 0;
@@ -695,6 +759,8 @@
   .flex-column-med {
     -ms-flex-direction: column;
         flex-direction: column; }
+    .flex-column-med > * {
+      max-width: 100%; }
     .flex-column-med.column-reverse-med {
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse; }
@@ -770,73 +836,85 @@
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(8.33333% - 1.46667rem);
-        flex-basis: calc(8.33333% - 1.46667rem); }
+        flex-basis: calc(8.33333% - 1.46667rem);
+    max-width: calc(8.33333% - 1.46667rem); }
 
   .flex-med-2 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(16.66667% - 1.33333rem);
-        flex-basis: calc(16.66667% - 1.33333rem); }
+        flex-basis: calc(16.66667% - 1.33333rem);
+    max-width: calc(16.66667% - 1.33333rem); }
 
   .flex-med-3 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(25% - 1.2rem);
-        flex-basis: calc(25% - 1.2rem); }
+        flex-basis: calc(25% - 1.2rem);
+    max-width: calc(25% - 1.2rem); }
 
   .flex-med-4 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(33.33333% - 1.06667rem);
-        flex-basis: calc(33.33333% - 1.06667rem); }
+        flex-basis: calc(33.33333% - 1.06667rem);
+    max-width: calc(33.33333% - 1.06667rem); }
 
   .flex-med-5 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(41.66667% - 0.93333rem);
-        flex-basis: calc(41.66667% - 0.93333rem); }
+        flex-basis: calc(41.66667% - 0.93333rem);
+    max-width: calc(41.66667% - 0.93333rem); }
 
   .flex-med-6 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(50% - 0.8rem);
-        flex-basis: calc(50% - 0.8rem); }
+        flex-basis: calc(50% - 0.8rem);
+    max-width: calc(50% - 0.8rem); }
 
   .flex-med-7 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(58.33333% - 0.66667rem);
-        flex-basis: calc(58.33333% - 0.66667rem); }
+        flex-basis: calc(58.33333% - 0.66667rem);
+    max-width: calc(58.33333% - 0.66667rem); }
 
   .flex-med-8 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(66.66667% - 0.53333rem);
-        flex-basis: calc(66.66667% - 0.53333rem); }
+        flex-basis: calc(66.66667% - 0.53333rem);
+    max-width: calc(66.66667% - 0.53333rem); }
 
   .flex-med-9 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(75% - 0.4rem);
-        flex-basis: calc(75% - 0.4rem); }
+        flex-basis: calc(75% - 0.4rem);
+    max-width: calc(75% - 0.4rem); }
 
   .flex-med-10 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(83.33333% - 0.26667rem);
-        flex-basis: calc(83.33333% - 0.26667rem); }
+        flex-basis: calc(83.33333% - 0.26667rem);
+    max-width: calc(83.33333% - 0.26667rem); }
 
   .flex-med-11 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(91.66667% - 0.13333rem);
-        flex-basis: calc(91.66667% - 0.13333rem); }
+        flex-basis: calc(91.66667% - 0.13333rem);
+    max-width: calc(91.66667% - 0.13333rem); }
 
   .flex-med-12 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(100% - 0rem);
-        flex-basis: calc(100% - 0rem); }
+        flex-basis: calc(100% - 0rem);
+    max-width: calc(100% - 0rem); }
 
   .flex-med-offset-0 {
     margin-left: 0.8rem; }
@@ -927,68 +1005,80 @@
     .flex-lg > * {
       box-sizing: border-box; }
 
-  .justify-lg-start {
+  .justify-start, .justify-lg-start {
     margin-left: -0.8rem;
     margin-right: -0.8rem;
     box-sizing: border-box; }
-    .justify-lg-start > .flex-lg-1 {
+    .justify-start > .flex-lg-1, .justify-lg-start > .flex-lg-1 {
       -ms-flex-preferred-size: calc(8.33333% - 1.6rem);
           flex-basis: calc(8.33333% - 1.6rem);
+      max-width: calc(8.33333% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-lg-start > .flex-lg-2 {
+    .justify-start > .flex-lg-2, .justify-lg-start > .flex-lg-2 {
       -ms-flex-preferred-size: calc(16.66667% - 1.6rem);
           flex-basis: calc(16.66667% - 1.6rem);
+      max-width: calc(16.66667% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-lg-start > .flex-lg-3 {
+    .justify-start > .flex-lg-3, .justify-lg-start > .flex-lg-3 {
       -ms-flex-preferred-size: calc(25% - 1.6rem);
           flex-basis: calc(25% - 1.6rem);
+      max-width: calc(25% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-lg-start > .flex-lg-4 {
+    .justify-start > .flex-lg-4, .justify-lg-start > .flex-lg-4 {
       -ms-flex-preferred-size: calc(33.33333% - 1.6rem);
           flex-basis: calc(33.33333% - 1.6rem);
+      max-width: calc(33.33333% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-lg-start > .flex-lg-5 {
+    .justify-start > .flex-lg-5, .justify-lg-start > .flex-lg-5 {
       -ms-flex-preferred-size: calc(41.66667% - 1.6rem);
           flex-basis: calc(41.66667% - 1.6rem);
+      max-width: calc(41.66667% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-lg-start > .flex-lg-6 {
+    .justify-start > .flex-lg-6, .justify-lg-start > .flex-lg-6 {
       -ms-flex-preferred-size: calc(50% - 1.6rem);
           flex-basis: calc(50% - 1.6rem);
+      max-width: calc(50% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-lg-start > .flex-lg-7 {
+    .justify-start > .flex-lg-7, .justify-lg-start > .flex-lg-7 {
       -ms-flex-preferred-size: calc(58.33333% - 1.6rem);
           flex-basis: calc(58.33333% - 1.6rem);
+      max-width: calc(58.33333% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-lg-start > .flex-lg-8 {
+    .justify-start > .flex-lg-8, .justify-lg-start > .flex-lg-8 {
       -ms-flex-preferred-size: calc(66.66667% - 1.6rem);
           flex-basis: calc(66.66667% - 1.6rem);
+      max-width: calc(66.66667% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-lg-start > .flex-lg-9 {
+    .justify-start > .flex-lg-9, .justify-lg-start > .flex-lg-9 {
       -ms-flex-preferred-size: calc(75% - 1.6rem);
           flex-basis: calc(75% - 1.6rem);
+      max-width: calc(75% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-lg-start > .flex-lg-10 {
+    .justify-start > .flex-lg-10, .justify-lg-start > .flex-lg-10 {
       -ms-flex-preferred-size: calc(83.33333% - 1.6rem);
           flex-basis: calc(83.33333% - 1.6rem);
+      max-width: calc(83.33333% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-lg-start > .flex-lg-11 {
+    .justify-start > .flex-lg-11, .justify-lg-start > .flex-lg-11 {
       -ms-flex-preferred-size: calc(91.66667% - 1.6rem);
           flex-basis: calc(91.66667% - 1.6rem);
+      max-width: calc(91.66667% - 1.6rem);
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-    .justify-lg-start > .flex-lg-12 {
+    .justify-start > .flex-lg-12, .justify-lg-start > .flex-lg-12 {
       -ms-flex-preferred-size: calc(100% - 1.6rem);
-          flex-basis: calc(100% - 1.6rem); }
+          flex-basis: calc(100% - 1.6rem);
+      max-width: calc(100% - 1.6rem); }
 
   .no-compensation-lg {
     margin-left: 0;
@@ -1001,6 +1091,8 @@
   .flex-column-lg {
     -ms-flex-direction: column;
         flex-direction: column; }
+    .flex-column-lg > * {
+      max-width: 100%; }
     .flex-column-lg.column-reverse-lg {
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse; }
@@ -1076,73 +1168,85 @@
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(8.33333% - 1.46667rem);
-        flex-basis: calc(8.33333% - 1.46667rem); }
+        flex-basis: calc(8.33333% - 1.46667rem);
+    max-width: calc(8.33333% - 1.46667rem); }
 
   .flex-lg-2 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(16.66667% - 1.33333rem);
-        flex-basis: calc(16.66667% - 1.33333rem); }
+        flex-basis: calc(16.66667% - 1.33333rem);
+    max-width: calc(16.66667% - 1.33333rem); }
 
   .flex-lg-3 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(25% - 1.2rem);
-        flex-basis: calc(25% - 1.2rem); }
+        flex-basis: calc(25% - 1.2rem);
+    max-width: calc(25% - 1.2rem); }
 
   .flex-lg-4 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(33.33333% - 1.06667rem);
-        flex-basis: calc(33.33333% - 1.06667rem); }
+        flex-basis: calc(33.33333% - 1.06667rem);
+    max-width: calc(33.33333% - 1.06667rem); }
 
   .flex-lg-5 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(41.66667% - 0.93333rem);
-        flex-basis: calc(41.66667% - 0.93333rem); }
+        flex-basis: calc(41.66667% - 0.93333rem);
+    max-width: calc(41.66667% - 0.93333rem); }
 
   .flex-lg-6 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(50% - 0.8rem);
-        flex-basis: calc(50% - 0.8rem); }
+        flex-basis: calc(50% - 0.8rem);
+    max-width: calc(50% - 0.8rem); }
 
   .flex-lg-7 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(58.33333% - 0.66667rem);
-        flex-basis: calc(58.33333% - 0.66667rem); }
+        flex-basis: calc(58.33333% - 0.66667rem);
+    max-width: calc(58.33333% - 0.66667rem); }
 
   .flex-lg-8 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(66.66667% - 0.53333rem);
-        flex-basis: calc(66.66667% - 0.53333rem); }
+        flex-basis: calc(66.66667% - 0.53333rem);
+    max-width: calc(66.66667% - 0.53333rem); }
 
   .flex-lg-9 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(75% - 0.4rem);
-        flex-basis: calc(75% - 0.4rem); }
+        flex-basis: calc(75% - 0.4rem);
+    max-width: calc(75% - 0.4rem); }
 
   .flex-lg-10 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(83.33333% - 0.26667rem);
-        flex-basis: calc(83.33333% - 0.26667rem); }
+        flex-basis: calc(83.33333% - 0.26667rem);
+    max-width: calc(83.33333% - 0.26667rem); }
 
   .flex-lg-11 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(91.66667% - 0.13333rem);
-        flex-basis: calc(91.66667% - 0.13333rem); }
+        flex-basis: calc(91.66667% - 0.13333rem);
+    max-width: calc(91.66667% - 0.13333rem); }
 
   .flex-lg-12 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     -ms-flex-preferred-size: calc(100% - 0rem);
-        flex-basis: calc(100% - 0rem); }
+        flex-basis: calc(100% - 0rem);
+    max-width: calc(100% - 0rem); }
 
   .flex-lg-offset-0 {
     margin-left: 0.8rem; }
