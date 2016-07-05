@@ -4,25 +4,8 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     sass: {
-      options: {
-        sourcemap: 'none'
-      },
-      compile: {
-        files: {
-          'style/style.css': 'scss/style.scss'
-        }
-      }
-    },
-    sass: {
-      options: {
-        sourcemap: 'none',
-        style: 'compressed'
-      },
-      compile: {
-        files: {
-          'dist/style/style.min.css': 'scss/style.scss'
-        }
-      }
+      dev: {options: {style: 'expanded', sourcemap: 'none'}, files: {'dist/style/style.css': 'scss/style.scss'}},
+      prod: {options: {style: 'compressed', sourcemap: 'none'}, files: {'dist/style/style.min.css': 'dist/style/style.css'}}
     },
     watch: {
       scss: {
@@ -42,7 +25,6 @@ module.exports = function(grunt) {
     }
   });
 
-  // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-autoprefixer');

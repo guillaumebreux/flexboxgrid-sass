@@ -6,7 +6,7 @@
   ],
   "description": "Small sass mixins for a full flexbox grid",
   "main": [
-    "dist/style/style.min.css"
+    "dist/style/style.css"
   ],
   "keywords": [
     "browser",
