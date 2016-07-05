@@ -1,10 +1,13 @@
 .flex {
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -ms-flex: 0 1 auto;
-      flex: 0 1 auto;
+      -webkit-box-flex: 0;
+          flex: 0 1 auto;
   -ms-flex-pack: justify;
-      justify-content: space-between; }
+      -webkit-box-pack: justify;
+          justify-content: space-between; }
   .flex.no-compensation {
     margin-left: 0;
     margin-right: 0; }
@@ -88,16 +91,22 @@
 
 .row-reverse {
   -ms-flex-direction: row-reverse;
-      flex-direction: row-reverse; }
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+          flex-direction: row-reverse; }
 
 .flex-column {
   -ms-flex-direction: column;
-      flex-direction: column; }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          flex-direction: column; }
   .flex-column > * {
     max-width: 100%; }
   .flex-column.column-reverse {
     -ms-flex-direction: column-reverse;
-        flex-direction: column-reverse; }
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            flex-direction: column-reverse; }
 
 .force-width {
   width: 100%; }
@@ -112,15 +121,18 @@
 
 .justify-start {
   -ms-flex-pack: start;
-      justify-content: flex-start; }
+      -webkit-box-pack: start;
+          justify-content: flex-start; }
 
 .justify-center {
   -ms-flex-pack: center;
-      justify-content: center; }
+      -webkit-box-pack: center;
+          justify-content: center; }
 
 .justify-end {
   -ms-flex-pack: end;
-      justify-content: flex-end; }
+      -webkit-box-pack: end;
+          justify-content: flex-end; }
 
 .justify-around {
   -ms-flex-pack: distribute;
@@ -128,7 +140,8 @@
 
 .justify-between {
   -ms-flex-pack: justify;
-      justify-content: space-between; }
+      -webkit-box-pack: justify;
+          justify-content: space-between; }
 
 .align-content-start {
   -ms-flex-line-pack: start;
@@ -148,104 +161,121 @@
 
 .align-items-start {
   -ms-flex-align: start;
-      align-items: flex-start; }
+      -webkit-box-align: start;
+          align-items: flex-start; }
 
 .align-items-center {
   -ms-flex-align: center;
-      align-items: center; }
+      -webkit-box-align: center;
+          align-items: center; }
 
 .align-items-end {
   -ms-flex-align: end;
-      align-items: flex-end; }
+      -webkit-box-align: end;
+          align-items: flex-end; }
 
 .align-items-stretch {
   -ms-flex-align: end;
-      align-items: flex-end; }
+      -webkit-box-align: end;
+          align-items: flex-end; }
 
 .align-items-baseline {
   -ms-flex-align: baseline;
-      align-items: baseline; }
+      -webkit-box-align: baseline;
+          align-items: baseline; }
 
 .flex-1 {
   -ms-flex: 0 0 auto;
-      flex: 0 0 auto;
+      -webkit-box-flex: 0;
+          flex: 0 0 auto;
   -ms-flex-preferred-size: calc(8.33333% - 1.46667rem);
       flex-basis: calc(8.33333% - 1.46667rem);
   max-width: calc(8.33333% - 1.46667rem); }
 
 .flex-2 {
   -ms-flex: 0 0 auto;
-      flex: 0 0 auto;
+      -webkit-box-flex: 0;
+          flex: 0 0 auto;
   -ms-flex-preferred-size: calc(16.66667% - 1.33333rem);
       flex-basis: calc(16.66667% - 1.33333rem);
   max-width: calc(16.66667% - 1.33333rem); }
 
 .flex-3 {
   -ms-flex: 0 0 auto;
-      flex: 0 0 auto;
+      -webkit-box-flex: 0;
+          flex: 0 0 auto;
   -ms-flex-preferred-size: calc(25% - 1.2rem);
       flex-basis: calc(25% - 1.2rem);
   max-width: calc(25% - 1.2rem); }
 
 .flex-4 {
   -ms-flex: 0 0 auto;
-      flex: 0 0 auto;
+      -webkit-box-flex: 0;
+          flex: 0 0 auto;
   -ms-flex-preferred-size: calc(33.33333% - 1.06667rem);
       flex-basis: calc(33.33333% - 1.06667rem);
   max-width: calc(33.33333% - 1.06667rem); }
 
 .flex-5 {
   -ms-flex: 0 0 auto;
-      flex: 0 0 auto;
+      -webkit-box-flex: 0;
+          flex: 0 0 auto;
   -ms-flex-preferred-size: calc(41.66667% - 0.93333rem);
       flex-basis: calc(41.66667% - 0.93333rem);
   max-width: calc(41.66667% - 0.93333rem); }
 
 .flex-6 {
   -ms-flex: 0 0 auto;
-      flex: 0 0 auto;
+      -webkit-box-flex: 0;
+          flex: 0 0 auto;
   -ms-flex-preferred-size: calc(50% - 0.8rem);
       flex-basis: calc(50% - 0.8rem);
   max-width: calc(50% - 0.8rem); }
 
 .flex-7 {
   -ms-flex: 0 0 auto;
-      flex: 0 0 auto;
+      -webkit-box-flex: 0;
+          flex: 0 0 auto;
   -ms-flex-preferred-size: calc(58.33333% - 0.66667rem);
       flex-basis: calc(58.33333% - 0.66667rem);
   max-width: calc(58.33333% - 0.66667rem); }
 
 .flex-8 {
   -ms-flex: 0 0 auto;
-      flex: 0 0 auto;
+      -webkit-box-flex: 0;
+          flex: 0 0 auto;
   -ms-flex-preferred-size: calc(66.66667% - 0.53333rem);
       flex-basis: calc(66.66667% - 0.53333rem);
   max-width: calc(66.66667% - 0.53333rem); }
 
 .flex-9 {
   -ms-flex: 0 0 auto;
-      flex: 0 0 auto;
+      -webkit-box-flex: 0;
+          flex: 0 0 auto;
   -ms-flex-preferred-size: calc(75% - 0.4rem);
       flex-basis: calc(75% - 0.4rem);
   max-width: calc(75% - 0.4rem); }
 
 .flex-10 {
   -ms-flex: 0 0 auto;
-      flex: 0 0 auto;
+      -webkit-box-flex: 0;
+          flex: 0 0 auto;
   -ms-flex-preferred-size: calc(83.33333% - 0.26667rem);
       flex-basis: calc(83.33333% - 0.26667rem);
   max-width: calc(83.33333% - 0.26667rem); }
 
 .flex-11 {
   -ms-flex: 0 0 auto;
-      flex: 0 0 auto;
+      -webkit-box-flex: 0;
+          flex: 0 0 auto;
   -ms-flex-preferred-size: calc(91.66667% - 0.13333rem);
       flex-basis: calc(91.66667% - 0.13333rem);
   max-width: calc(91.66667% - 0.13333rem); }
 
 .flex-12 {
   -ms-flex: 0 0 auto;
-      flex: 0 0 auto;
+      -webkit-box-flex: 0;
+          flex: 0 0 auto;
   -ms-flex-preferred-size: calc(100% - 0rem);
       flex-basis: calc(100% - 0rem);
   max-width: calc(100% - 0rem); }
@@ -307,11 +337,13 @@
 
 .flex-first {
   -ms-flex-order: -1;
-      order: -1; }
+      -webkit-box-ordinal-group: 0;
+          order: -1; }
 
 .flex-last {
   -ms-flex-order: 1;
-      order: 1; }
+      -webkit-box-ordinal-group: 2;
+          order: 1; }
 
 .flex-auto {
   -ms-flex-preferred-size: auto;
@@ -332,11 +364,14 @@
 @media (min-width: 560px) {
   .flex-sm {
     display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
     -ms-flex: 0 1 auto;
-        flex: 0 1 auto;
+        -webkit-box-flex: 0;
+            flex: 0 1 auto;
     -ms-flex-pack: justify;
-        justify-content: space-between; }
+        -webkit-box-pack: justify;
+            justify-content: space-between; }
     .flex-sm.no-compensation-sm {
       margin-left: 0;
       margin-right: 0; }
@@ -420,16 +455,22 @@
 
   .row-reverse-sm {
     -ms-flex-direction: row-reverse;
-        flex-direction: row-reverse; }
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+            flex-direction: row-reverse; }
 
   .flex-column-sm {
     -ms-flex-direction: column;
-        flex-direction: column; }
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            flex-direction: column; }
     .flex-column-sm > * {
       max-width: 100%; }
     .flex-column-sm.column-reverse-sm {
       -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse; }
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: reverse;
+              flex-direction: column-reverse; }
 
   .force-width-sm {
     width: 100%; }
@@ -444,15 +485,18 @@
 
   .justify-sm-start {
     -ms-flex-pack: start;
-        justify-content: flex-start; }
+        -webkit-box-pack: start;
+            justify-content: flex-start; }
 
   .justify-sm-center {
     -ms-flex-pack: center;
-        justify-content: center; }
+        -webkit-box-pack: center;
+            justify-content: center; }
 
   .justify-sm-end {
     -ms-flex-pack: end;
-        justify-content: flex-end; }
+        -webkit-box-pack: end;
+            justify-content: flex-end; }
 
   .justify-sm-around {
     -ms-flex-pack: distribute;
@@ -460,7 +504,8 @@
 
   .justify-sm-between {
     -ms-flex-pack: justify;
-        justify-content: space-between; }
+        -webkit-box-pack: justify;
+            justify-content: space-between; }
 
   .align-content-sm-start {
     -ms-flex-line-pack: start;
@@ -480,104 +525,121 @@
 
   .align-items-sm-start {
     -ms-flex-align: start;
-        align-items: flex-start; }
+        -webkit-box-align: start;
+            align-items: flex-start; }
 
   .align-items-sm-center {
     -ms-flex-align: center;
-        align-items: center; }
+        -webkit-box-align: center;
+            align-items: center; }
 
   .align-items-sm-end {
     -ms-flex-align: end;
-        align-items: flex-end; }
+        -webkit-box-align: end;
+            align-items: flex-end; }
 
   .align-items-sm-stretch {
     -ms-flex-align: end;
-        align-items: flex-end; }
+        -webkit-box-align: end;
+            align-items: flex-end; }
 
   .align-items-sm-baseline {
     -ms-flex-align: baseline;
-        align-items: baseline; }
+        -webkit-box-align: baseline;
+            align-items: baseline; }
 
   .flex-sm-1 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(8.33333% - 1.46667rem);
         flex-basis: calc(8.33333% - 1.46667rem);
     max-width: calc(8.33333% - 1.46667rem); }
 
   .flex-sm-2 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(16.66667% - 1.33333rem);
         flex-basis: calc(16.66667% - 1.33333rem);
     max-width: calc(16.66667% - 1.33333rem); }
 
   .flex-sm-3 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(25% - 1.2rem);
         flex-basis: calc(25% - 1.2rem);
     max-width: calc(25% - 1.2rem); }
 
   .flex-sm-4 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(33.33333% - 1.06667rem);
         flex-basis: calc(33.33333% - 1.06667rem);
     max-width: calc(33.33333% - 1.06667rem); }
 
   .flex-sm-5 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(41.66667% - 0.93333rem);
         flex-basis: calc(41.66667% - 0.93333rem);
     max-width: calc(41.66667% - 0.93333rem); }
 
   .flex-sm-6 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(50% - 0.8rem);
         flex-basis: calc(50% - 0.8rem);
     max-width: calc(50% - 0.8rem); }
 
   .flex-sm-7 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(58.33333% - 0.66667rem);
         flex-basis: calc(58.33333% - 0.66667rem);
     max-width: calc(58.33333% - 0.66667rem); }
 
   .flex-sm-8 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(66.66667% - 0.53333rem);
         flex-basis: calc(66.66667% - 0.53333rem);
     max-width: calc(66.66667% - 0.53333rem); }
 
   .flex-sm-9 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(75% - 0.4rem);
         flex-basis: calc(75% - 0.4rem);
     max-width: calc(75% - 0.4rem); }
 
   .flex-sm-10 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(83.33333% - 0.26667rem);
         flex-basis: calc(83.33333% - 0.26667rem);
     max-width: calc(83.33333% - 0.26667rem); }
 
   .flex-sm-11 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(91.66667% - 0.13333rem);
         flex-basis: calc(91.66667% - 0.13333rem);
     max-width: calc(91.66667% - 0.13333rem); }
 
   .flex-sm-12 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(100% - 0rem);
         flex-basis: calc(100% - 0rem);
     max-width: calc(100% - 0rem); }
@@ -639,11 +701,13 @@
 
   .flex-sm-first {
     -ms-flex-order: -1;
-        order: -1; }
+        -webkit-box-ordinal-group: 0;
+            order: -1; }
 
   .flex-sm-last {
     -ms-flex-order: 1;
-        order: 1; }
+        -webkit-box-ordinal-group: 2;
+            order: 1; }
 
   .flex-sm-auto {
     -ms-flex-preferred-size: auto;
@@ -663,11 +727,14 @@
 @media (min-width: 769px) {
   .flex-med {
     display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
     -ms-flex: 0 1 auto;
-        flex: 0 1 auto;
+        -webkit-box-flex: 0;
+            flex: 0 1 auto;
     -ms-flex-pack: justify;
-        justify-content: space-between; }
+        -webkit-box-pack: justify;
+            justify-content: space-between; }
     .flex-med.no-compensation-med {
       margin-left: 0;
       margin-right: 0; }
@@ -751,16 +818,22 @@
 
   .row-reverse-med {
     -ms-flex-direction: row-reverse;
-        flex-direction: row-reverse; }
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+            flex-direction: row-reverse; }
 
   .flex-column-med {
     -ms-flex-direction: column;
-        flex-direction: column; }
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            flex-direction: column; }
     .flex-column-med > * {
       max-width: 100%; }
     .flex-column-med.column-reverse-med {
       -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse; }
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: reverse;
+              flex-direction: column-reverse; }
 
   .force-width-med {
     width: 100%; }
@@ -775,15 +848,18 @@
 
   .justify-med-start {
     -ms-flex-pack: start;
-        justify-content: flex-start; }
+        -webkit-box-pack: start;
+            justify-content: flex-start; }
 
   .justify-med-center {
     -ms-flex-pack: center;
-        justify-content: center; }
+        -webkit-box-pack: center;
+            justify-content: center; }
 
   .justify-med-end {
     -ms-flex-pack: end;
-        justify-content: flex-end; }
+        -webkit-box-pack: end;
+            justify-content: flex-end; }
 
   .justify-med-around {
     -ms-flex-pack: distribute;
@@ -791,7 +867,8 @@
 
   .justify-med-between {
     -ms-flex-pack: justify;
-        justify-content: space-between; }
+        -webkit-box-pack: justify;
+            justify-content: space-between; }
 
   .align-content-med-start {
     -ms-flex-line-pack: start;
@@ -811,104 +888,121 @@
 
   .align-items-med-start {
     -ms-flex-align: start;
-        align-items: flex-start; }
+        -webkit-box-align: start;
+            align-items: flex-start; }
 
   .align-items-med-center {
     -ms-flex-align: center;
-        align-items: center; }
+        -webkit-box-align: center;
+            align-items: center; }
 
   .align-items-med-end {
     -ms-flex-align: end;
-        align-items: flex-end; }
+        -webkit-box-align: end;
+            align-items: flex-end; }
 
   .align-items-med-stretch {
     -ms-flex-align: end;
-        align-items: flex-end; }
+        -webkit-box-align: end;
+            align-items: flex-end; }
 
   .align-items-med-baseline {
     -ms-flex-align: baseline;
-        align-items: baseline; }
+        -webkit-box-align: baseline;
+            align-items: baseline; }
 
   .flex-med-1 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(8.33333% - 1.46667rem);
         flex-basis: calc(8.33333% - 1.46667rem);
     max-width: calc(8.33333% - 1.46667rem); }
 
   .flex-med-2 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(16.66667% - 1.33333rem);
         flex-basis: calc(16.66667% - 1.33333rem);
     max-width: calc(16.66667% - 1.33333rem); }
 
   .flex-med-3 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(25% - 1.2rem);
         flex-basis: calc(25% - 1.2rem);
     max-width: calc(25% - 1.2rem); }
 
   .flex-med-4 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(33.33333% - 1.06667rem);
         flex-basis: calc(33.33333% - 1.06667rem);
     max-width: calc(33.33333% - 1.06667rem); }
 
   .flex-med-5 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(41.66667% - 0.93333rem);
         flex-basis: calc(41.66667% - 0.93333rem);
     max-width: calc(41.66667% - 0.93333rem); }
 
   .flex-med-6 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(50% - 0.8rem);
         flex-basis: calc(50% - 0.8rem);
     max-width: calc(50% - 0.8rem); }
 
   .flex-med-7 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(58.33333% - 0.66667rem);
         flex-basis: calc(58.33333% - 0.66667rem);
     max-width: calc(58.33333% - 0.66667rem); }
 
   .flex-med-8 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(66.66667% - 0.53333rem);
         flex-basis: calc(66.66667% - 0.53333rem);
     max-width: calc(66.66667% - 0.53333rem); }
 
   .flex-med-9 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(75% - 0.4rem);
         flex-basis: calc(75% - 0.4rem);
     max-width: calc(75% - 0.4rem); }
 
   .flex-med-10 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(83.33333% - 0.26667rem);
         flex-basis: calc(83.33333% - 0.26667rem);
     max-width: calc(83.33333% - 0.26667rem); }
 
   .flex-med-11 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(91.66667% - 0.13333rem);
         flex-basis: calc(91.66667% - 0.13333rem);
     max-width: calc(91.66667% - 0.13333rem); }
 
   .flex-med-12 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(100% - 0rem);
         flex-basis: calc(100% - 0rem);
     max-width: calc(100% - 0rem); }
@@ -970,11 +1064,13 @@
 
   .flex-med-first {
     -ms-flex-order: -1;
-        order: -1; }
+        -webkit-box-ordinal-group: 0;
+            order: -1; }
 
   .flex-med-last {
     -ms-flex-order: 1;
-        order: 1; }
+        -webkit-box-ordinal-group: 2;
+            order: 1; }
 
   .flex-med-auto {
     -ms-flex-preferred-size: auto;
@@ -994,11 +1090,14 @@
 @media (min-width: 1024px) {
   .flex-lg {
     display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
     -ms-flex: 0 1 auto;
-        flex: 0 1 auto;
+        -webkit-box-flex: 0;
+            flex: 0 1 auto;
     -ms-flex-pack: justify;
-        justify-content: space-between; }
+        -webkit-box-pack: justify;
+            justify-content: space-between; }
     .flex-lg.no-compensation-lg {
       margin-left: 0;
       margin-right: 0; }
@@ -1082,16 +1181,22 @@
 
   .row-reverse-lg {
     -ms-flex-direction: row-reverse;
-        flex-direction: row-reverse; }
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+            flex-direction: row-reverse; }
 
   .flex-column-lg {
     -ms-flex-direction: column;
-        flex-direction: column; }
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            flex-direction: column; }
     .flex-column-lg > * {
       max-width: 100%; }
     .flex-column-lg.column-reverse-lg {
       -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse; }
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: reverse;
+              flex-direction: column-reverse; }
 
   .force-width-lg {
     width: 100%; }
@@ -1106,15 +1211,18 @@
 
   .justify-lg-start {
     -ms-flex-pack: start;
-        justify-content: flex-start; }
+        -webkit-box-pack: start;
+            justify-content: flex-start; }
 
   .justify-lg-center {
     -ms-flex-pack: center;
-        justify-content: center; }
+        -webkit-box-pack: center;
+            justify-content: center; }
 
   .justify-lg-end {
     -ms-flex-pack: end;
-        justify-content: flex-end; }
+        -webkit-box-pack: end;
+            justify-content: flex-end; }
 
   .justify-lg-around {
     -ms-flex-pack: distribute;
@@ -1122,7 +1230,8 @@
 
   .justify-lg-between {
     -ms-flex-pack: justify;
-        justify-content: space-between; }
+        -webkit-box-pack: justify;
+            justify-content: space-between; }
 
   .align-content-lg-start {
     -ms-flex-line-pack: start;
@@ -1142,104 +1251,121 @@
 
   .align-items-lg-start {
     -ms-flex-align: start;
-        align-items: flex-start; }
+        -webkit-box-align: start;
+            align-items: flex-start; }
 
   .align-items-lg-center {
     -ms-flex-align: center;
-        align-items: center; }
+        -webkit-box-align: center;
+            align-items: center; }
 
   .align-items-lg-end {
     -ms-flex-align: end;
-        align-items: flex-end; }
+        -webkit-box-align: end;
+            align-items: flex-end; }
 
   .align-items-lg-stretch {
     -ms-flex-align: end;
-        align-items: flex-end; }
+        -webkit-box-align: end;
+            align-items: flex-end; }
 
   .align-items-lg-baseline {
     -ms-flex-align: baseline;
-        align-items: baseline; }
+        -webkit-box-align: baseline;
+            align-items: baseline; }
 
   .flex-lg-1 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(8.33333% - 1.46667rem);
         flex-basis: calc(8.33333% - 1.46667rem);
     max-width: calc(8.33333% - 1.46667rem); }
 
   .flex-lg-2 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(16.66667% - 1.33333rem);
         flex-basis: calc(16.66667% - 1.33333rem);
     max-width: calc(16.66667% - 1.33333rem); }
 
   .flex-lg-3 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(25% - 1.2rem);
         flex-basis: calc(25% - 1.2rem);
     max-width: calc(25% - 1.2rem); }
 
   .flex-lg-4 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(33.33333% - 1.06667rem);
         flex-basis: calc(33.33333% - 1.06667rem);
     max-width: calc(33.33333% - 1.06667rem); }
 
   .flex-lg-5 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(41.66667% - 0.93333rem);
         flex-basis: calc(41.66667% - 0.93333rem);
     max-width: calc(41.66667% - 0.93333rem); }
 
   .flex-lg-6 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(50% - 0.8rem);
         flex-basis: calc(50% - 0.8rem);
     max-width: calc(50% - 0.8rem); }
 
   .flex-lg-7 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(58.33333% - 0.66667rem);
         flex-basis: calc(58.33333% - 0.66667rem);
     max-width: calc(58.33333% - 0.66667rem); }
 
   .flex-lg-8 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(66.66667% - 0.53333rem);
         flex-basis: calc(66.66667% - 0.53333rem);
     max-width: calc(66.66667% - 0.53333rem); }
 
   .flex-lg-9 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(75% - 0.4rem);
         flex-basis: calc(75% - 0.4rem);
     max-width: calc(75% - 0.4rem); }
 
   .flex-lg-10 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(83.33333% - 0.26667rem);
         flex-basis: calc(83.33333% - 0.26667rem);
     max-width: calc(83.33333% - 0.26667rem); }
 
   .flex-lg-11 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(91.66667% - 0.13333rem);
         flex-basis: calc(91.66667% - 0.13333rem);
     max-width: calc(91.66667% - 0.13333rem); }
 
   .flex-lg-12 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            flex: 0 0 auto;
     -ms-flex-preferred-size: calc(100% - 0rem);
         flex-basis: calc(100% - 0rem);
     max-width: calc(100% - 0rem); }
@@ -1301,11 +1427,13 @@
 
   .flex-lg-first {
     -ms-flex-order: -1;
-        order: -1; }
+        -webkit-box-ordinal-group: 0;
+            order: -1; }
 
   .flex-lg-last {
     -ms-flex-order: 1;
-        order: 1; }
+        -webkit-box-ordinal-group: 2;
+            order: 1; }
 
   .flex-lg-auto {
     -ms-flex-preferred-size: auto;

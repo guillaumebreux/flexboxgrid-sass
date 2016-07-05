@@ -13,6 +13,17 @@ module.exports = function(grunt) {
         }
       }
     },
+    sass: {
+      options: {
+        sourcemap: 'none',
+        style: 'compressed'
+      },
+      compile: {
+        files: {
+          'dist/style/style.min.css': 'scss/style.scss'
+        }
+      }
+    },
     watch: {
       scss: {
         files: ['**/*.scss', '**/*.html'],
@@ -20,9 +31,6 @@ module.exports = function(grunt) {
       }
     },
     autoprefixer: {
-      options: {
-        browsers: ['last 2 versions']
-      },
       dist: {
         files: [{
           expand: true,
