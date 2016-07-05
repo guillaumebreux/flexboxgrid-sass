@@ -9,29 +9,51 @@ $fbgs-breakpoints: (
 @mixin basis($i, $n, $justify-start: false) {
   @if $justify-start {
     flex-basis: calc(#{100% / $n} - #{$fbgs-gutter-width});
+    max-width: calc(#{100% / $n} - #{$fbgs-gutter-width});
     @if $i != $fbgs-grid-number {
       margin-left: #{$fbgs-gutter-width * 0.5}; margin-right: #{$fbgs-gutter-width * 0.5};
     }
-  } @else { flex-basis: calc(#{100% / $n} - #{$fbgs-gutter-width * ($n - 1) / $n}); }
+  } @else {
+    $fbgs-gutter-width-calc: $fbgs-gutter-width * ($n - 1) / $n;
+    @if (($n - 1) / $n) > 0 {
+      flex-basis: calc(#{100% / $n} - #{$fbgs-gutter-width-calc});
+      max-width: calc(#{100% / $n} - #{$fbgs-gutter-width-calc});
+    } @else {
+      flex-basis: #{100% / $n};
+      max-width: #{100% / $n};
+    }
+  }
+}
+@mixin basis-column($i, $n) {
+  $fbgs-gutter-width-calc: $fbgs-gutter-width * ($n - 1) / $n;
+  @if (($n - 1) / $n) > 0 {
+    flex-basis: #{100% / $n};
+    height: #{100% / $n}; padding-top: #{$fbgs-gutter-width-calc}; padding-bottom: #{$fbgs-gutter-width-calc};
+  }
+}
+@mixin justifyStart($breakpoint_name) {
+  margin-left: $fbgs-gutter-compensation; margin-right: $fbgs-gutter-compensation;
+  box-sizing: border-box;
+  @for $i from 1 through $fbgs-grid-number {
+    > .flex#{$breakpoint_name}-#{$i} { @include basis($i, $fbgs-grid-number / $i, true); }
+  }
 }
 @mixin fbgs-init($breakpoint_name) {
   // Parent
   .flex#{$breakpoint_name} {
     display: flex; flex: 0 1 auto; justify-content: space-between;
+    &.no-compensation#{$breakpoint_name} { margin-left: 0; margin-right: 0; }
     > * { box-sizing: border-box; }
   }
-  .justify#{$breakpoint_name}-start {
-    margin-left: $fbgs-gutter-compensation; margin-right: $fbgs-gutter-compensation;
-    box-sizing: border-box;
-    @for $i from 1 through $fbgs-grid-number {
-      > .flex#{$breakpoint_name}-#{$i} { @include basis($i, $fbgs-grid-number / $i, true); }
-    }
-  }
-  .no-compensation#{$breakpoint_name} { margin-left: 0; margin-right: 0; }
+  @if $breakpoint_name == '' { .justify-start { @include justifyStart($breakpoint_name) } }
+  @else { .justify-start, .justify#{$breakpoint_name}-start { @include justifyStart($breakpoint_name) } }
   .row-reverse#{$breakpoint_name} { flex-direction: row-reverse; }
   .flex-column#{$breakpoint_name} {
     flex-direction: column;
     &.column-reverse#{$breakpoint_name} { flex-direction: column-reverse; }
+    @for $i from 1 through $fbgs-grid-number {
+      > .flex#{$breakpoint_name}-#{$i} { max-width: 100%; @include basis-column($i, $fbgs-grid-number / $i); }
+    }
   }
   .force-width#{$breakpoint_name} { width: 100%; }
   .flex#{$breakpoint_name}-wrap { flex-wrap: wrap; }
@@ -67,8 +89,8 @@ $fbgs-breakpoints: (
   .flex#{$breakpoint_name}-last { order: 1; }
   .flex#{$breakpoint_name}-auto { flex-basis: auto; }
   .flex#{$breakpoint_name}-center { margin-left: auto; margin-right: auto; }
-  .flex#{$breakpoint_name}-left { margin-left: initial; margin-right: 0; }
-  .flex#{$breakpoint_name}-right { margin-right: initial; margin-left: 0; }
+  .flex#{$breakpoint_name}-left { margin-left: initial; margin-right: auto; }
+  .flex#{$breakpoint_name}-right { margin-right: initial; margin-left: auto; }
 }
 
 @include fbgs-init('');

@@ -5,7 +5,9 @@
     "gbreux <contact@guillaumebreux.com>"
   ],
   "description": "Small sass mixins for a full flexbox grid",
-  "main": "index.html",
+  "main": [
+    "dist/style/style.min.css"
+  ],
   "keywords": [
     "browser",
     "flexbox",
@@ -17,7 +19,7 @@
     "flexboxgrid-sass"
   ],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://guillaumebreux.github.io/flexboxgrid-sass/",
   "ignore": [
     "**/.*",
     "node_modules",
